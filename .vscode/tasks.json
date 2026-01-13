@@ -1,0 +1,97 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Next client",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && rmdir /s /q .next 2>NUL & npm run build"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build Next client (wait)",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && npm run build"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Typecheck client",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && npx tsc --noEmit --pretty false"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Typecheck client (after resizable fix)",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && npx tsc --noEmit --pretty false"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Typecheck client to log",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && npx tsc --noEmit --pretty false > tsc.log 2>&1 & type tsc.log"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Typecheck client (no truncation)",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && npx tsc --noEmit --pretty false --noErrorTruncation"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build client (fresh)",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"pushd \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && rmdir /s /q .next 2>NUL & npm run build"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Dev server (client)",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"pushd \"c:\\Users\\Ashwin Samuel\\Downloads\\Sprint1\\client\" && npm run dev"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}
